@@ -40,7 +40,7 @@ The deployment topology isolates state management from processing nodes, utilizi
 The sequence diagram below details the operational lifecycle of a move transaction inside the multi-node cluster environment:
 
 <p align="center">
-  <img src="./sequence.svg" alt="Sequence Diagram" width="800"/>
+  <img src="./sequence.png" alt="Sequence Diagram" width="800"/>
 </p>
 
 ---
