@@ -8,9 +8,6 @@ Checkmate Engine is a production-grade, distributed backend platform engineered 
 
 The deployment topology isolates state management from processing nodes, utilizing Apache Kafka for asynchronous ingestion and Redis for high-speed session tracking.
 
-<p align="center">
-  <img src="./architecture.svg" alt="Architecture Diagram" width="800"/>
-</p>
 
 ---
 
