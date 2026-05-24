@@ -1,0 +1,57 @@
+spring:
+  application:
+    name: checkmate-engine
+
+  # ----------------------------------------
+  # PostgreSQL Connection
+  # ----------------------------------------
+  datasource:
+    url: jdbc:postgresql://localhost:5432/checkmate_db
+    username: chess_user
+    password: chess_password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update # Automatically creates the GameRecord and PlayerProfile tables
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  # ----------------------------------------
+  # Redis Connection
+  # ----------------------------------------
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+  # ----------------------------------------
+  # Apache Kafka Connection
+  # ----------------------------------------
+  kafka:
+    bootstrap-servers: localhost:9092
+
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+    consumer:
+      group-id: matchmaking-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        # Explicitly trust the matchmaking package so Jackson can deserialize the DTOs
+        spring.json.trusted.packages: "com.checkmate.matchmaking.dto.*"
+
+# ----------------------------------------
+# Logging Configuration
+# ----------------------------------------
+logging:
+  level:
+    com.checkmate: INFO
+    org.springframework.web.reactive.socket: INFO
+    org.springframework.kafka: WARN
+

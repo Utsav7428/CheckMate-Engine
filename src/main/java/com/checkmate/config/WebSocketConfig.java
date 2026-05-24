@@ -1,0 +1,32 @@
+package com.checkmate.config;
+
+import com.checkmate.websocket.GameWebSocketHandler;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.reactive.HandlerMapping;
+import org.springframework.web.reactive.handler.SimpleUrlHandlerMapping;
+import org.springframework.web.reactive.socket.server.support.WebSocketHandlerAdapter;
+
+import java.util.HashMap;
+import java.util.Map;
+
+@Configuration
+public class WebSocketConfig {
+
+    @Bean
+    public HandlerMapping webSocketMapping(GameWebSocketHandler webSocketHandler) {
+        Map<String, Object> map = new HashMap<>();
+        // Maps the incoming WebSocket handshake to your custom reactive handler
+        map.put("/ws/game", webSocketHandler);
+
+        SimpleUrlHandlerMapping handlerMapping = new SimpleUrlHandlerMapping();
+        handlerMapping.setOrder(1);
+        handlerMapping.setUrlMap(map);
+        return handlerMapping;
+    }
+
+    @Bean
+    public WebSocketHandlerAdapter handlerAdapter() {
+        return new WebSocketHandlerAdapter();
+    }
+}
