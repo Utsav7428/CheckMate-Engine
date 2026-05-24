@@ -1,81 +1,91 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="100%" height="100%">
     <defs>
-        <linearGradient id="clientGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#333333"/> <stop offset="100%" stop-color="#1A1A1A"/> </linearGradient>
-        <linearGradient id="engineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#4F4F4F"/> <stop offset="100%" stop-color="#2D2D2D"/> </linearGradient>
-        <linearGradient id="kafkaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#E0E0E0"/> <stop offset="100%" stop-color="#BDBDBD"/> </linearGradient>
-        <linearGradient id="redisGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#E0E0E0"/> <stop offset="100%" stop-color="#BDBDBD"/> </linearGradient>
-        
         <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
-            <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.15"/>
+            <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.15"/>
         </filter>
         
-        <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-            <path d="M 0 1 L 10 5 L 0 9 z" fill="#000000"/> </marker>
-        <marker id="arrow-gray" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-            <path d="M 0 1 L 10 5 L 0 9 z" fill="#4F4F4F"/> </marker>
+        <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#000000"/>
+        </marker>
+        
+        <marker id="arrow-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+            <path d="M 10 1 L 0 5 L 10 9 z" fill="#000000"/>
+        </marker>
     </defs>
 
-    <rect width="100%" height="100%" fill="#FFFFFF"/> <text x="30" y="40" font-family="Segoe UI, Helvetica, sans-serif" font-size="22" font-weight="bold" fill="#000000">Checkmate Engine Architecture</text>
-    <text x="30" y="65" font-family="Segoe UI, Helvetica, sans-serif" font-size="14" fill="#333333">Monochromatic Production-Grade Distributed Topology</text>
+    <rect width="100%" height="100%" fill="#FFFFFF"/>
 
-    <g transform="translate(150, 120)" filter="url(#dropShadow)">
-        <rect width="180" height="80" rx="8" fill="url(#clientGrad)" stroke="#000000" stroke-width="1.5"/>
-        <text x="90" y="38" font-family="Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Player 1 Client</text>
-        <text x="90" y="58" font-family="Segoe UI, sans-serif" font-size="11" fill="#CCCCCC" text-anchor="middle">WebSocket Connection</text>
+    <text x="40" y="50" font-family="Segoe UI, Helvetica, sans-serif" font-size="22" font-weight="bold" fill="#000000">Architectural Blueprint</text>
+    <text x="40" y="75" font-family="Segoe UI, Helvetica, sans-serif" font-size="14" fill="#666666">Production-Grade Distributed Topology &amp; Infrastructure</text>
+
+    <g transform="translate(180, 130)" filter="url(#dropShadow)">
+        <rect width="240" height="65" rx="6" fill="#333333" stroke="#000000" stroke-width="1.5"/>
+        <text x="120" y="32" font-family="Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Player 1 Client</text>
+        <text x="120" y="50" font-family="Segoe UI, sans-serif" font-size="12" fill="#CCCCCC" text-anchor="middle">Web / Mobile Interface</text>
     </g>
 
-    <g transform="translate(670, 120)" filter="url(#dropShadow)">
-        <rect width="180" height="80" rx="8" fill="url(#clientGrad)" stroke="#000000" stroke-width="1.5"/>
-        <text x="90" y="38" font-family="Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Player 2 Client</text>
-        <text x="90" y="58" font-family="Segoe UI, sans-serif" font-size="11" fill="#CCCCCC" text-anchor="middle">WebSocket Connection</text>
+    <g transform="translate(580, 130)" filter="url(#dropShadow)">
+        <rect width="240" height="65" rx="6" fill="#333333" stroke="#000000" stroke-width="1.5"/>
+        <text x="120" y="32" font-family="Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Player 2 Client</text>
+        <text x="120" y="50" font-family="Segoe UI, sans-serif" font-size="12" fill="#CCCCCC" text-anchor="middle">Web / Mobile Interface</text>
     </g>
 
-    <rect x="80" y="270" width="840" height="160" rx="12" fill="none" stroke="#666666" stroke-width="2" stroke-dasharray="8,6"/>
-    <text x="95" y="295" font-family="Segoe UI, sans-serif" font-size="12" font-weight="bold" fill="#333333" letter-spacing="1">STATELESS APPLICATION CLUSTER (MULTI-JVM)</text>
+    <rect x="70" y="270" width="860" height="180" rx="10" fill="#F9F9F9" stroke="#999999" stroke-width="2" stroke-dasharray="8,6"/>
+    <text x="90" y="295" font-family="Segoe UI, sans-serif" font-size="13" font-weight="bold" fill="#4F4F4F" letter-spacing="1">STATELESS GAME ENGINE CLUSTER</text>
 
-    <g transform="translate(120, 320)" filter="url(#dropShadow)">
-        <rect width="320" height="90" rx="8" fill="url(#engineGrad)" stroke="#000000" stroke-width="1.5"/>
-        <text x="160" y="35" font-family="Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Game Engine Core — Pod A</text>
-        <text x="160" y="60" font-family="Segoe UI, sans-serif" font-size="12" fill="#F0F0F0" text-anchor="middle">Predictive Simulation Engine (Spring Boot)</text>
+    <g transform="translate(130, 320)" filter="url(#dropShadow)">
+        <rect width="320" height="85" rx="6" fill="#4F4F4F" stroke="#000000" stroke-width="1.5"/>
+        <text x="160" y="35" font-family="Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Checkmate Engine Pod A</text>
+        <text x="160" y="55" font-family="Segoe UI, sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">Predictive Simulation Subsystem</text>
+        <text x="160" y="70" font-family="Segoe UI, sans-serif" font-size="11" fill="#CCCCCC" text-anchor="middle">Spring Boot JVM</text>
     </g>
 
-    <g transform="translate(560, 320)" filter="url(#dropShadow)">
-        <rect width="320" height="90" rx="8" fill="url(#engineGrad)" stroke="#000000" stroke-width="1.5"/>
-        <text x="160" y="35" font-family="Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Game Engine Core — Pod B</text>
-        <text x="160" y="60" font-family="Segoe UI, sans-serif" font-size="12" fill="#F0F0F0" text-anchor="middle">Predictive Simulation Engine (Spring Boot)</text>
+    <g transform="translate(550, 320)" filter="url(#dropShadow)">
+        <rect width="320" height="85" rx="6" fill="#4F4F4F" stroke="#000000" stroke-width="1.5"/>
+        <text x="160" y="35" font-family="Segoe UI, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Checkmate Engine Pod B</text>
+        <text x="160" y="55" font-family="Segoe UI, sans-serif" font-size="12" fill="#E0E0E0" text-anchor="middle">Predictive Simulation Subsystem</text>
+        <text x="160" y="70" font-family="Segoe UI, sans-serif" font-size="11" fill="#CCCCCC" text-anchor="middle">Spring Boot JVM</text>
     </g>
 
-    <g transform="translate(120, 520)" filter="url(#dropShadow)">
-        <rect width="350" height="80" rx="6" fill="url(#kafkaGrad)" stroke="#000000" stroke-width="1"/>
-        <text x="175" y="35" font-family="Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#000000" text-anchor="middle">Apache Kafka Distributed Cluster</text>
-        <text x="175" y="58" font-family="Segoe UI, sans-serif" font-size="12" fill="#333333" text-anchor="middle">Asynchronous Matchmaking Pipelines (Elo Partitions)</text>
+    <g transform="translate(70, 540)" filter="url(#dropShadow)">
+        <rect width="260" height="85" rx="6" fill="#E0E0E0" stroke="#000000" stroke-width="1.5"/>
+        <text x="130" y="35" font-family="Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#000000" text-anchor="middle">Apache Kafka</text>
+        <text x="130" y="55" font-family="Segoe UI, sans-serif" font-size="12" fill="#333333" text-anchor="middle">Matchmaking Streams</text>
+        <text x="130" y="70" font-family="Segoe UI, sans-serif" font-size="11" fill="#666666" text-anchor="middle">(Async Elo Queues)</text>
     </g>
 
-    <g transform="translate(530, 520)" filter="url(#dropShadow)">
-        <rect width="350" height="80" rx="6" fill="url(#redisGrad)" stroke="#000000" stroke-width="1"/>
-        <text x="175" y="35" font-family="Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#000000" text-anchor="middle">Redis In-Memory Store</text>
-        <text x="175" y="58" font-family="Segoe UI, sans-serif" font-size="12" fill="#333333" text-anchor="middle">Active Game Room Mappings &amp; Expiry Timeouts</text>
+    <g transform="translate(370, 540)" filter="url(#dropShadow)">
+        <rect width="260" height="85" rx="6" fill="#E0E0E0" stroke="#000000" stroke-width="1.5"/>
+        <text x="130" y="35" font-family="Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#000000" text-anchor="middle">Redis Cache</text>
+        <text x="130" y="55" font-family="Segoe UI, sans-serif" font-size="12" fill="#333333" text-anchor="middle">In-Memory Session Storage</text>
+        <text x="130" y="70" font-family="Segoe UI, sans-serif" font-size="11" fill="#666666" text-anchor="middle">(Active States &amp; Timeouts)</text>
     </g>
 
-    <path d="M 240,205 L 240,312" stroke="#000000" stroke-width="2.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-    <text x="248" y="255" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#000000" transform="rotate(90, 248, 255)"></text>
+    <g transform="translate(670, 540)" filter="url(#dropShadow)">
+        <rect width="260" height="85" rx="6" fill="#E0E0E0" stroke="#000000" stroke-width="1.5"/>
+        <text x="130" y="35" font-family="Segoe UI, sans-serif" font-size="15" font-weight="bold" fill="#000000" text-anchor="middle">PostgreSQL</text>
+        <text x="130" y="55" font-family="Segoe UI, sans-serif" font-size="12" fill="#333333" text-anchor="middle">Relational Archives</text>
+        <text x="130" y="70" font-family="Segoe UI, sans-serif" font-size="11" fill="#666666" text-anchor="middle">(PGN &amp; Historical Profiles)</text>
+    </g>
 
-    <path d="M 760,205 L 760,312" stroke="#000000" stroke-width="2.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-    <text x="768" y="255" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#000000" transform="rotate(90, 768, 255)"></text>
+    <path d="M 300 195 L 300 320" stroke="#000000" stroke-width="2.5" marker-start="url(#arrow-start)" marker-end="url(#arrow)"/>
+    <rect x="235" y="240" width="130" height="24" fill="#FFFFFF" rx="4"/>
+    <text x="300" y="256" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#000000" text-anchor="middle">Spring WebFlux</text>
 
-    <path d="M 445,365 L 552,365" stroke="#333333" stroke-width="1.5" stroke-dasharray="4,4" marker-start="url(#arrow-gray)" marker-end="url(#arrow-gray)"/>
-    <text x="500" y="355" font-family="Segoe UI, sans-serif" font-size="11" fill="#333333" text-anchor="middle">Cross-JVM Pairing</text>
+    <path d="M 700 195 L 700 320" stroke="#000000" stroke-width="2.5" marker-start="url(#arrow-start)" marker-end="url(#arrow)"/>
+    <rect x="635" y="240" width="130" height="24" fill="#FFFFFF" rx="4"/>
+    <text x="700" y="256" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#000000" text-anchor="middle">Spring WebFlux</text>
 
-    <path d="M 220,415 L 220,512" stroke="#000000" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 450 362 L 550 362" stroke="#666666" stroke-width="1.5" stroke-dasharray="4,4" marker-start="url(#arrow-start)" marker-end="url(#arrow)"/>
+    <text x="500" y="355" font-family="Segoe UI, sans-serif" font-size="10" fill="#666666" text-anchor="middle">Cross-JVM Pairing</text>
+
+    <path d="M 230 405 L 200 540" stroke="#000000" stroke-width="2" marker-end="url(#arrow)"/>
     
-    <path d="M 350,515 L 570,415" stroke="#000000" stroke-width="2" stroke-dasharray="4,2" marker-end="url(#arrow)"/>
-    <text x="440" y="475" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#000000" text-anchor="middle">Asynchronous Match Events</text>
+    <path d="M 580 405 L 330 550" stroke="#000000" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
 
-    <path d="M 380,415 L 610,514" stroke="#000000" stroke-width="2" marker-end="url(#arrow)"/>
-    <path d="M 720,415 L 720,512" stroke="#000000" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-    <text x="728" y="470" font-family="Segoe UI, sans-serif" font-size="11" font-weight="bold" fill="#000000">Active Mappings</text>
+    <path d="M 350 405 L 470 540" stroke="#000000" stroke-width="2" marker-start="url(#arrow-start)" marker-end="url(#arrow)"/>
+    <path d="M 650 405 L 530 540" stroke="#000000" stroke-width="2" marker-start="url(#arrow-start)" marker-end="url(#arrow)"/>
+
+    <path d="M 710 405 L 770 540" stroke="#000000" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+
 </svg>
